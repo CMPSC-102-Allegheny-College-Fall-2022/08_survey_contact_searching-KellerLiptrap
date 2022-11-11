@@ -4,7 +4,6 @@ import typer
 from pathlib import Path
 from typing import Optional
 from contactsearcher import search
-
 cli = typer.Typer()
 
 @cli.command()

@@ -34,7 +34,9 @@ def contactsearcher(
     typer.echo(
         f'  We are looking for contacts who have a job related to "{job_description}":'
     )
+    jobs = search.search_for_email_given_job(job_description,contacts_text)
     print("")
-    print(search.search_for_email_given_job(job_description,contacts_text))
+    for line in jobs:
+        print (str(line))
     print("")
     print("Wow, we found some contacts! Email them to learn about your job!")
